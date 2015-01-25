@@ -1,3 +1,6 @@
+# Various crap
+*.py[ocd]
+
 # Envs
 .virtualenv
 
