@@ -46,6 +46,10 @@ ROOT_URLCONF = 'portfolio.urls'
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
+from .secret import BASEPATH
+STATIC_ROOT = BASEPATH + 'portfolio/static'
+TEMPLATE_DIRS = (BASEPATH + 'portfolio/templates',)
+
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
