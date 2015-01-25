@@ -1,0 +1,9 @@
+# Envs
+.virtualenv
+
+# Secret files
+portfolio/settings/secret.py
+portfolio/settings/key.py
+
+# SQLite database
+db.*
