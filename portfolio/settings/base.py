@@ -16,9 +16,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 from .key import SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-TEMPLATE_DEBUG = True
+from .secret import DEBUG
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
 
