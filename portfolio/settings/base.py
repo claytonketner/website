@@ -47,9 +47,9 @@ ROOT_URLCONF = 'portfolio.urls'
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 from .secret import BASEPATH
-STATIC_ROOT = BASEPATH + 'portfolio/static'
-TEMPLATE_DIRS = (BASEPATH + 'portfolio/templates',)
-STATIC_URL = '/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASEPATH + 'portfolio/static/'
+TEMPLATE_DIRS = (BASEPATH + 'portfolio/templates/',)
 
 
 # Database
