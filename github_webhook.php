@@ -8,6 +8,8 @@ shell_exec("touch tmp/restart.txt");
 
 // Set permissions
 $perms = array(
+    "700 github_webhook.php",
+    "700 dispatch.fcgi",
     "600 portfolio/settings/key.py",
     "600 portfolio/settings/secret.py",
 );
