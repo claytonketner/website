@@ -1,8 +1,13 @@
-# Various crap
+# Various crap files
 *.py[ocd]
+.DS_Store
 
 # Envs
 .virtualenv
+
+# Static/web files
+cgi-bin/
+static/
 
 # Secret files
 portfolio/settings/secret.py
