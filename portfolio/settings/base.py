@@ -19,7 +19,7 @@ from .key import SECRET_KEY
 from .secret import DEBUG
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '.claytonketner.com']
 
 
 # Application definition
@@ -46,10 +46,11 @@ ROOT_URLCONF = 'portfolio.urls'
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
-from .secret import BASEPATH
-STATIC_URL = '/static/'
-STATIC_ROOT = BASEPATH + 'portfolio/static/'
-TEMPLATE_DIRS = (BASEPATH + 'portfolio/templates/',)
+from .secret import BASE_PATH
+from .secret import BASE_WEB_PATH
+STATIC_URL = '/portfolio/static/'
+STATIC_ROOT = BASE_WEB_PATH + 'portfolio/static/'
+TEMPLATE_DIRS = (BASE_PATH + 'portfolio/templates/',)
 
 
 # Database
@@ -74,8 +75,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.6/howto/static-files/
-
