@@ -1,13 +1,3 @@
-"""
-Django settings for portfolio project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
-"""
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -50,11 +40,15 @@ from .secret import BASE_PATH
 from .secret import BASE_WEB_PATH
 STATIC_URL = '/portfolio/static/'
 STATIC_ROOT = BASE_WEB_PATH + 'portfolio/static/'
-TEMPLATE_DIRS = (BASE_PATH + 'portfolio/templates/',)
+STATICFILES_DIRS = (
+    BASE_PATH + 'portfolio/site_media/',
+)
+TEMPLATE_DIRS = (
+    BASE_PATH + 'portfolio/templates/',
+)
 
 
 # Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -64,7 +58,6 @@ DATABASES = {
 }
 
 # Internationalization
-# https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
