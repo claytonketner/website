@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    {% load static %}
+
+    <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
+
+    <link rel="stylesheet" href="{% static "css/general.css" %}">
+    <link rel="stylesheet" href="{% static "css/header.css" %}">
+    <link rel="stylesheet" href="{% static "css/fonts.css" %}">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+    {% block css %}
+    {% endblock %}
+</head>
+
+{% url 'portfolio.views.index' as index_url %}
+
+<body>
+    <div id="header">
+        <div id="banner-wrapper">
+            <div id="banner" class="content-sized">
+                <a href="{{ index_url }}">
+                    <div id="title-area">
+                        <div id="title">Clayton Salinger Ketner</div>
+                        <div id="subtitle">Automation Specialist at Counsyl</div>
+                    </div>
+                </a>
+                <div id="mugshot-wrapper">
+                    <div id="mugshot">
+                        <img src="{% static "images/mugshot.jpg" %}" height="100px">
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <div id="navBar-wrapper">
+            <nav id="navBar" class="content-sized">
+                <div id="textNav">
+                    <div class="navItem"><a href="{{ index_url }}">At a Glance</a></div>
+                </div>
+                <div id="iconNav">
+                    <div class="navItem"><a href="https://github.com/claytonketner/general-resume/blob/master/resume.pdf?raw=true" target="_blank">
+                        <img src="{% static "images/icons/resume icon.png" %}" alt="resume"></a>
+                    </div>
+                    <div class="navItem"><a href="mailto:claytonketner@me.com"><img src="{% static "images/icons/mail icon.png" %}" alt="email"></a></div>
+                    <div class="navItem"><a href="http://www.github.com/claytonketner" target="_blank"><img src="{% static "images/icons/github icon.png" %}" alt="github"></a></div>
+                </div>
+                <div style="clear: both;"></div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="all-content-wrapper">
+        <div id="content-wrapper" class="content-sized">
+            <div id="content" class="sidebar-or-content">
+                {% block content %}
+                {% endblock content %}
+            </div>
+            <div class="after-float"></div>
+        </div>
+    </div>
+
+    <div id="footer">
+        &copy; Clayton Salinger Ketner 2015
+    </div>
+</body>
+</html>
