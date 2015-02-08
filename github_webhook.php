@@ -17,3 +17,6 @@ foreach ($perms as $perm)
 {
     echo shell_exec("chmod " . $perm);
 }
+
+shell_exec("rm -r portfolio/static")
+shell_exec("./manage.py collectstatic --noinput");
