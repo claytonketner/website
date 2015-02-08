@@ -8,3 +8,6 @@ foreach ($perms as $perm)
 {
     echo shell_exec("chmod " . $perm);
 }
+
+
+echo "Done";
