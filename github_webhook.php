@@ -9,8 +9,7 @@ shell_exec("touch tmp/restart.txt");
 
 // Rebuild static
 shell_exec("rm -r portfolio/static");
-shell_exec("source .virtualenv/bin/activate");
-shell_exec("./manage.py collectstatic --noinput");
+shell_exec("source .virtualenv/bin/activate && ./manage.py collectstatic --noinput");
 
 // Set permissions
 $perms = array(
