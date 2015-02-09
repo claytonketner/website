@@ -2,6 +2,9 @@
 *.py[ocd]
 .DS_Store
 
+# Envs
+.virtualenv
+
 # Static/web files
 cgi-bin/
 static/
