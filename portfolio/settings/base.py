@@ -49,11 +49,19 @@ TEMPLATE_DIRS = (
 
 
 # Database
+from .secret import DB_NAME
+from .secret import DB_USER
+from .secret import DB_PASS
+from .secret import DB_HOST
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASS,
+        'HOST': DB_HOST,
+        'PORT': '3306',
     }
 }
 
