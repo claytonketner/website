@@ -4,6 +4,7 @@
 
 # Envs
 .virtualenv
+.virtualenv_old
 
 # Static/web files
 cgi-bin/
