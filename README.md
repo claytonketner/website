@@ -1,4 +1,4 @@
-The code for my website.
+The code for my website. It's on shared hosting, which is kind of a pain.
 
 Notes
 ------------
