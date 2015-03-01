@@ -16,6 +16,7 @@ class BlogAdmin(admin.ModelAdmin):
         if not obj.when_created:
             obj.when_created = timezone.now()
             obj.save()
+        obj.save()
 
 
 class BlogEntryAdmin(admin.ModelAdmin):
@@ -29,6 +30,7 @@ class BlogEntryAdmin(admin.ModelAdmin):
         if not obj.when_created:
             obj.when_created = timezone.now()
             obj.save()
+        obj.save()
 
 
 admin.site.register(Blog, BlogAdmin)
