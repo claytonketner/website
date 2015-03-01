@@ -18,16 +18,17 @@
     {% endblock %}
 </head>
 
-{% url 'portfolio.views.index' as index_url %}
-
 <body>
     <div id="header">
         <div id="banner-wrapper">
             <div id="banner" class="content-sized">
-                <a href="{{ index_url }}">
+                <a href="{% url 'index' %}">
                     <div id="title-area">
                         <div id="title">Clayton Salinger Ketner</div>
-                        <div id="subtitle">Automation Specialist at Counsyl</div>
+                        <div id="subtitle">
+                            Mechanical Engineering &amp; Computer Science<br>
+                            Automation Specialist at Counsyl
+                        </div>
                     </div>
                 </a>
                 <div id="mugshot-wrapper">
@@ -41,14 +42,25 @@
         <div id="navBar-wrapper">
             <nav id="navBar" class="content-sized">
                 <div id="textNav">
-                    <div class="navItem"><a href="{{ index_url }}">At a Glance</a></div>
+                    {% for single_blog in blogs %}
+                        <div class="navItem
+                                    {% if forloop.last %}
+                                        lastNavItem
+                                    {% endif %}">
+                            <a class="
+                                {% if single_blog == current_blog %}
+                                    currentPage
+                                {% endif %}"
+                               href="{% url 'blog' single_blog.slug %}">{{ single_blog.name }}</a>
+                        </div>
+                    {% endfor %}
                 </div>
                 <div id="iconNav">
                     <div class="navItem"><a href="https://github.com/claytonketner/general-resume/blob/master/resume.pdf?raw=true" target="_blank">
-                        <img src="{% static "images/icons/resume icon.png" %}" alt="resume"></a>
+                        <img src="{% static "images/icons/resume_icon.png" %}" alt="resume"></a>
                     </div>
-                    <div class="navItem"><a href="mailto:claytonketner@me.com"><img src="{% static "images/icons/mail icon.png" %}" alt="email"></a></div>
-                    <div class="navItem"><a href="http://www.github.com/claytonketner" target="_blank"><img src="{% static "images/icons/github icon.png" %}" alt="github"></a></div>
+                    <div class="navItem"><a href="mailto:claytonketner@me.com"><img src="{% static "images/icons/mail_icon.png" %}" alt="email"></a></div>
+                    <div class="navItem"><a href="http://www.github.com/claytonketner" target="_blank"><img src="{% static "images/icons/github_icon.png" %}" alt="github"></a></div>
                 </div>
                 <div style="clear: both;"></div>
             </nav>
