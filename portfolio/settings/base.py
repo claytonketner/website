@@ -21,6 +21,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_extensions',
+    'markdown_deux',
+    'pagedown',
+
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -47,8 +53,8 @@ TEMPLATE_DIRS = (
     BASE_PATH + 'portfolio/templates/',
 )
 
-
 # Database
+from .secret import DB_ENGINE
 from .secret import DB_NAME
 from .secret import DB_USER
 from .secret import DB_PASS
@@ -56,7 +62,7 @@ from .secret import DB_HOST
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': DB_ENGINE,
         'NAME': DB_NAME,
         'USER': DB_USER,
         'PASSWORD': DB_PASS,
@@ -64,6 +70,8 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+SHELL_PLUS = 'ipython'
 
 # Internationalization
 
