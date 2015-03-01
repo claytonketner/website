@@ -15,7 +15,6 @@ class BlogAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         if not obj.when_created:
             obj.when_created = timezone.now()
-            obj.save()
         obj.save()
 
 
@@ -29,7 +28,6 @@ class BlogEntryAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         if not obj.when_created:
             obj.when_created = timezone.now()
-            obj.save()
         obj.save()
 
 
