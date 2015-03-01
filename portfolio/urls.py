@@ -9,9 +9,9 @@ urlpatterns = patterns(
     url(r'^$',
         'portfolio.views.index',
         name='index'),
-    url(r'^blog/(?P<target_blog_slug>[\w\-]+)/$',
-        'portfolio.views.blog',
-        name='blog'),
+
+    url(r'^blog/',
+        include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
 )

@@ -6,6 +6,10 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^(?P<target_blog_slug>[\w\-]+)/$',
+        'blog.views.blog',
+        name='blog'),
+    url(r'^admin/',
+        include(admin.site.urls)),
 )
 
