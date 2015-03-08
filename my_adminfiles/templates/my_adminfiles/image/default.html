@@ -1,0 +1,5 @@
+{% load dimension_tags %}
+
+{% spaceless %}
+<img src="{{ upload.upload.url }}" width="{{ upload|trim_width }}" height="{{ upload|trim_height }}" class="{{ options.class }}" alt="{% if options.alt %}{{ options.alt }}{% else %}{{ upload.title }}{% endif %}" />
+{% endspaceless %}
