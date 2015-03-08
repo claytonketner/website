@@ -6,6 +6,7 @@
 .virtualenv
 
 # Static/web files
+cache/
 cgi-bin/
 static/
 
