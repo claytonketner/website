@@ -78,6 +78,16 @@ DATABASES = {
 SHELL_PLUS = 'ipython'
 ADMINFILES_UPLOAD_TO = 'portfolio/site_media/uploads/'
 THUMBNAIL_EXTENSION = 'png'
+MARKDOWN_DEUX_STYLES = {
+    "default": {
+        "extras": { "code-friendly": None, },
+        "safe_mode": "escape",
+    },
+    "trusted": {
+        "extras": { "code-friendly": None, },
+        "safe_mode": False,
+    }
+}
 
 # Internationalization
 
