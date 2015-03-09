@@ -11,6 +11,8 @@ TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['localhost', '.claytonketner.com']
 
+from .secret import HOST
+
 
 # Application definition
 
