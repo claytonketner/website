@@ -6,5 +6,5 @@ django-pagedown
 flup==1.0.2
 ipython
 MySQL-python==1.2.5
-Pillow==2.7.0
+Pillow==2.6.1
 sorl-thumbnail
