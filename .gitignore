@@ -1,6 +1,7 @@
 # Various crap files
 *.py[ocd]
 .DS_Store
+*.swp
 
 # Envs
 .virtualenv
