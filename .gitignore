@@ -10,7 +10,7 @@
 cache/
 cgi-bin/
 static/
-site-media/uploads/
+site_media/uploads/
 
 # Secret files
 portfolio/settings/secret.py
