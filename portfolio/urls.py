@@ -13,5 +13,6 @@ urlpatterns = patterns(
     url(r'^blog/',
         include('blog.urls')),
 
+    url(r'^adminfiles/', include('adminfiles.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

@@ -22,11 +22,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'adminfiles',
     'django_extensions',
     'markdown_deux',
     'pagedown',
+    'sorl.thumbnail',
 
     'blog',
+    'my_adminfiles',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,6 +51,7 @@ STATIC_URL = '/portfolio/static/'
 STATIC_ROOT = BASE_WEB_PATH + 'portfolio/static/'
 STATICFILES_DIRS = (
     BASE_PATH + 'portfolio/site_media/',
+    BASE_PATH + 'portfolio/site_media/uploads/',
 )
 TEMPLATE_DIRS = (
     BASE_PATH + 'portfolio/templates/',
@@ -72,6 +76,8 @@ DATABASES = {
 }
 
 SHELL_PLUS = 'ipython'
+ADMINFILES_UPLOAD_TO = 'portfolio/site_media/uploads/'
+THUMBNAIL_EXTENSION = 'png'
 
 # Internationalization
 

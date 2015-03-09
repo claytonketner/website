@@ -1,5 +1,7 @@
 {% extends 'portfolio/base.html' %}
 {% load markdown_deux_tags %}
+{% load adminfiles_tags %}
+{% load adminfiles_fix_tags %}
 
 {% block content %}
     {% for blog_entry in blog_entries %}
@@ -12,7 +14,7 @@
             </div>
             <div class="after-float"></div>
         </div>
-        <div>{{ blog_entry.body|markdown }}</div>
+        <div class="blog-entry-content">{{ blog_entry.body|render_uploads:"my_adminfiles"|fix_upload_paths|safe }}</div>
         {% if not forloop.last %}
             <hr>
         {% endif %}
