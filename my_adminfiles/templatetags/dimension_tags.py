@@ -1,4 +1,5 @@
 from django import template
+from django.conf import settings
 
 
 register = template.Library()
@@ -19,3 +20,8 @@ def trim_height(upload):
     height = upload.height()
     percent_scale = float(trimmed_width) / width
     return int(height * percent_scale)
+
+
+@register.filter
+def fix_url(url):
+    return settings.HOST + url
