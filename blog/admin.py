@@ -2,7 +2,6 @@ from django.contrib import admin
 from django.db import models
 from django.utils import timezone
 
-from pagedown.widgets import AdminPagedownWidget
 from adminfiles.admin import FilePickerAdmin
 
 from blog.models import Blog
@@ -22,9 +21,6 @@ class BlogAdmin(admin.ModelAdmin):
 class BlogEntryAdmin(FilePickerAdmin):
     list_display = ('title', 'blog', 'when_created', 'published')
     prepopulated_fields = {'slug': ('title', )}
-    formfield_overrides = {
-        models.TextField: {'widget': AdminPagedownWidget },
-    }
     adminfiles_fields = ('body',)
 
     def save_model(self, request, obj, form, change):
