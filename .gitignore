@@ -18,3 +18,4 @@ portfolio/settings/key.py
 
 # SQLite database
 db.*
+db_backups/

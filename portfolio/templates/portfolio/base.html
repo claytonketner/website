@@ -15,7 +15,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     {% block css %}
-    {% endblock %}
+    {% endblock css %}
+
+    {% block js %}
+    {% endblock js %}
 </head>
 
 <body>
@@ -33,7 +36,7 @@
                 </a>
                 <div id="mugshot-wrapper">
                     <div id="mugshot">
-                        <img src="{% static "images/mugshot.jpg" %}" height="100px">
+                        <img src="{% static "images/header/mugshot.jpg" %}" height="100px">
                     </div>
                 </div>
                 <div style="clear:both;"></div>
