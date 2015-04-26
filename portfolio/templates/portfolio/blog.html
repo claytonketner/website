@@ -3,6 +3,19 @@
 {% load adminfiles_tags %}
 {% load adminfiles_fix_tags %}
 
+{% load static %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static "blog/css/expanding_image.css" %}">
+<link rel="stylesheet" href="{% static "blog/css/general.css" %}">
+{% endblock css %}
+
+{% block js %}
+{{ block.super }}
+<script type="text/javascript" src="{% static "blog/js/expanding_image.js" %}"></script>
+{% endblock js %}
+
 {% block content %}
     {% for blog_entry in blog_entries %}
         <div class="blog-header">
