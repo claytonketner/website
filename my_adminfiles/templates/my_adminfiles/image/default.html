@@ -1,5 +1,18 @@
 {% load dimension_tags %}
 
 {% spaceless %}
-<img src="{{ upload.upload.url|fix_url }}" width="{{ upload|trim_width }}" height="{{ upload|trim_height }}" class="{{ options.class }}" alt="{% if options.alt %}{{ options.alt }}{% else %}{{ upload.title }}{% endif %}" />
+<div class="
+{% if options.expanding %}
+  expanding-image-wrapper hiding
+{% endif %}
+">
+  <img src="{{ upload.upload.url|fix_url }}"
+       alt="{% if options.alt %}
+              {{ options.alt }}
+            {% else %}
+              {{ upload.title }}
+            {% endif %}"
+       class="{{ options.img_class }}"
+  />
+</div>
 {% endspaceless %}
