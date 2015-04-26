@@ -13,6 +13,12 @@ ALLOWED_HOSTS = ['localhost', '.claytonketner.com']
 
 from .secret import HOST
 
+from .secret import EMAIL_HOST
+from .secret import SERVER_EMAIL
+from .secret import EMAIL_HOST_USER
+from .secret import EMAIL_HOST_PASSWORD
+from .secret import EMAIL_PORT
+
 
 # Application definition
 
