@@ -9,8 +9,8 @@
 # Static/web files
 cache/
 cgi-bin/
-static/
-site_media/uploads/
+portfolio/static/
+portfolio/site_media/uploads/
 
 # Secret files
 portfolio/settings/secret.py
