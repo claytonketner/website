@@ -20,6 +20,7 @@ try:
     from .secret import EMAIL_HOST_PASSWORD
     from .secret import EMAIL_PORT
     from .secret import EMAIL_USE_SSL
+    from .secret import ADMINS
 except Exception as ex:
     pass
 
