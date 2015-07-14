@@ -61,11 +61,11 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 from .secret import BASE_PATH
 from .secret import BASE_WEB_PATH
-STATIC_URL = '/portfolio/static/'
-STATIC_ROOT = BASE_WEB_PATH + 'portfolio/static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_WEB_PATH + 'static/'
 STATICFILES_DIRS = (
-    BASE_PATH + 'portfolio/site_media/',
-    BASE_PATH + 'portfolio/site_media/uploads/',
+    BASE_PATH + 'portfolio/static/',
+    BASE_PATH + 'uploads/',
 )
 TEMPLATE_DIRS = (
     BASE_PATH + 'portfolio/templates/',
@@ -90,7 +90,7 @@ DATABASES = {
 }
 
 SHELL_PLUS = 'ipython'
-ADMINFILES_UPLOAD_TO = 'portfolio/site_media/uploads/'
+ADMINFILES_UPLOAD_TO = 'uploads/portfolio_uploads/'
 THUMBNAIL_EXTENSION = 'png'
 MARKDOWN_DEUX_STYLES = {
     "default": {

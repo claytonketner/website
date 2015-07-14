@@ -7,14 +7,14 @@
 .virtualenv
 
 # Static/web files
-cache/
-cgi-bin/
-portfolio/static/
-portfolio/site_media/uploads/
+/cache/
+/cgi-bin/
+/static/
+/uploads/
 
 # Secret files
-portfolio/settings/secret.py
-portfolio/settings/key.py
+/portfolio/settings/secret.py
+/portfolio/settings/key.py
 
 # SQLite database
 db.*
